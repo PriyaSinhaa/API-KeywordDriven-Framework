@@ -5,9 +5,11 @@ import java.util.Properties;
 
 import org.testing.testSteps.HTTPMethods;
 import org.testing.utilities.PropertiesHandle;
+import org.testng.annotations.Test;
 
 public class TC5_DeleteParticular {
 	
+	@Test
 	public void testCase5() throws IOException
 	{
 		//load the Properties file
