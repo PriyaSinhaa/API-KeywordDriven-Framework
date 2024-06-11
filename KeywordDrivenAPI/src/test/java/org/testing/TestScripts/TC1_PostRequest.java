@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.Random;
 
+import org.response.validation.validateResponse;
 import org.testing.testSteps.HTTPMethods;
 import org.testing.utilities.JsonHandle;
 import org.testing.utilities.PropertiesHandle;
@@ -36,6 +37,10 @@ public class TC1_PostRequest {
 	//call the Post http method
 	HTTPMethods http =new HTTPMethods(pr);
     Response resObj= http.postMethod(jsonRequestBody, "QA_URI"); //send the JSON body and URI 
+    
+    //validate the response 
+    validateResponse.statusCodeValidation(201, resObj);
+    
     returnIdValue=jsonParsingUsingJsonPath.doParsing("id", resObj);
 	
 	
