@@ -8,10 +8,10 @@ import io.restassured.response.Response;
 public class validateResponse 
 {
 	
-	public static Boolean statusCodeValidation(int expectedStatuscode,Response res)
+	public static Boolean statusCodeValidation(int expectedStatuscode,Response res, String className)
 	{
 		int actualStatuscode=res.statusCode();
-		Boolean result=Assertion.assertion(expectedStatuscode, actualStatuscode);
+		Boolean result=Assertion.assertion(expectedStatuscode, actualStatuscode,className);
 		return result;
 	}
     

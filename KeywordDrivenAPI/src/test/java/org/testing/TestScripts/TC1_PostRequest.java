@@ -39,7 +39,7 @@ public class TC1_PostRequest {
     Response resObj= http.postMethod(jsonRequestBody, "QA_URI"); //send the JSON body and URI 
     
     //validate the response 
-    validateResponse.statusCodeValidation(201, resObj);
+    validateResponse.statusCodeValidation(201, resObj,"TC1_PostRequest");
     
     returnIdValue=jsonParsingUsingJsonPath.doParsing("id", resObj);
 	
